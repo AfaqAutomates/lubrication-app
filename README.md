@@ -1,6 +1,50 @@
-# Lubrication — Equipment & PM Tracking
+# Lubrication — Industrial Equipment PM & Lubrication Management
 
-A clean, modern application for managing equipment lubrication schedules, services, and oil analysis.
+A professional, hierarchical application for managing equipment, components, lubrication points, running hours, and maintenance activities across multiple plants.
+
+## Features
+
+**Equipment Hierarchy:**
+- Equipment → Components → Lubrication Points (3-level structure)
+- Each level has status, criticality, and type tracking
+- SAP integration ready (SAP Equipment Number field)
+
+**Advanced Tracking:**
+- 36 pre-seeded plant resources (KILN01, COALM01, etc.)
+- Running hours tracking with cascade to linked equipment
+- Running hours RPC function for automatic updates
+- Component and lubrication point auto-suggestions
+
+**Lubrication Management:**
+- Lubricant master list with 5 pre-seeded lubricants
+- Calendar interval tracking (months)
+- Running hours interval tracking
+- Special instructions per point
+- Lubrication type classification (Oil/Grease/Aerosol)
+
+**Work Orders & Activities:**
+- Log service activities with quantity and UOM
+- Status tracking (completed/pending)
+- Technician assignment
+- Complete activity history
+
+**User Management:**
+- Admin panel for user creation
+- Per-user feature toggles:
+  - assets_edit (Equipment/Components)
+  - points_edit (Lubrication Points)
+  - workorders_record (Log activities)
+  - workorders_edit (Edit work orders)
+  - inventory_edit (Inventory management)
+- Role-based sidebar navigation
+- Automatic role detection (Admin/Engineer/Technician)
+
+**Reporting & Insights:**
+- Dashboard with key metrics
+- Running hours tracking page
+- Oil analysis flag tracking
+- Activity history
+- Summary reports by equipment/component
 
 ## Quick Setup (5 minutes)
 

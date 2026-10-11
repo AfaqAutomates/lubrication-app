@@ -549,6 +549,31 @@ textarea {
   background: var(--text-lighter);
 }
 
+/* TYPEAHEAD */
+.typeahead-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.typeahead-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.typeahead-item:hover {
+  background: var(--bg);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .app-layout {
