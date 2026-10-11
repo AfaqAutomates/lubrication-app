@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lubrication - Equipment & PM Tracking</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23C89456'/><text x='50' y='60' text-anchor='middle' font-size='50' fill='white' font-weight='bold'>●</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- AUTH SCREEN -->
+<div id="authScreen" class="screen auth-screen">
+  <div class="auth-container">
+    <div class="auth-header">
+      <div class="auth-logo">●</div>
+      <h1>Lubrication</h1>
+      <p>Equipment & PM Tracking</p>
+    </div>
+    
+    <div class="auth-form">
+      <div id="authError" class="error-message" style="display:none;"></div>
+      
+      <div id="loginForm">
+        <input id="authEmail" type="email" placeholder="Email" class="input" autocomplete="email">
+        <input id="authPassword" type="password" placeholder="Password" class="input" autocomplete="current-password">
+        <button id="btnSignIn" class="btn-primary">Sign in</button>
+        <div style="text-align:center;margin-top:16px;">
+          <button id="btnShowSignup" class="btn-text">Create account</button>
+        </div>
+      </div>
+
+      <div id="signupForm" style="display:none;">
+        <input id="signupEmail" type="email" placeholder="Email" class="input" autocomplete="email">
+        <input id="signupPassword" type="password" placeholder="Password (min 8 chars)" class="input" autocomplete="new-password">
+        <input id="signupName" type="text" placeholder="Full name" class="input">
+        <button id="btnSignUp" class="btn-primary">Create account</button>
+        <div style="text-align:center;margin-top:16px;">
+          <button id="btnShowLogin" class="btn-text">Back to login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APP SCREEN -->
+<div id="appScreen" class="screen app-screen" style="display:none;">
+  <div class="app-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">●</div>
+        <h2>Lubrication</h2>
+      </div>
+      
+      <nav class="sidebar-nav" id="sidebarNav"></nav>
+      
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar" id="userAvatar">?</div>
+          <div class="user-details">
+            <div class="user-name" id="userName">Loading...</div>
+            <div class="user-role" id="userRole">—</div>
+          </div>
+        </div>
+        <button id="btnChangePw" class="btn-text">Change password</button>
+        <button id="btnSignOut" class="btn-text">Sign out</button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="topbar">
+        <div class="topbar-left">
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle">Overview of your lubrication operations.</p>
+        </div>
+        <div class="topbar-right">
+          <span id="topbarExtra"></span>
+        </div>
+      </div>
+
+      <div class="page-content" id="pageContent"></div>
+    </main>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modalOverlay" class="modal-overlay" style="display:none;">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">Modal</h2>
+      <button class="modal-close" onclick="window.closeModal()">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <button id="modalBtnSave" class="btn-primary" onclick="window.saveModal()">Save</button>
+      <button class="btn-secondary" onclick="window.closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
